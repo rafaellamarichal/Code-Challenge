@@ -24,10 +24,8 @@ document.addEventListener('DOMContentLoaded', function(){
         .then(response => response.json())
         .then(data => {
           console.log('Respuesta del servidor:', data);
-      
-          const texto= document.getElementById('formularioreg');
-          texto.innerHTML = `Respuesta del servidor:<br>${JSON.stringify(data, null, 2)}`;
         })
+        
         .catch(error => {
           console.error('Error en la solicitud:', error);
         });
